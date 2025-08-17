@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My First 3D</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #111;
+      }
+      model-viewer {
+        width: 600px;
+        height: 600px;
+        --poster-color: transparent; /* remove grey background */
+      }
+    </style>
+  </head>
+  <body>
+<button onclick="viewer.src='assets/cube.glb'">Cube</button>
+<button onclick="viewer.src='assets/sphere.glb'">Sphere</button>
+
+<model-viewer id="viewer" src="assets/cube.glb"
+              auto-rotate camera-controls shadow-intensity="1">
+</model-viewer>
+
+  </body>
+</html>

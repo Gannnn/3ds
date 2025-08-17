@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: 3ds_web
+    ports:
+      - "8000:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./assets:/usr/share/nginx/html/assets
